@@ -9,8 +9,9 @@ main {
 }
 
 .main-image {
-  background-image: url(../images/image1.png);
+  background-image: url(../images/image5.png);
   background-repeat: no-repeat;
-  height: 1000px;
-  background-size: cover;
+  height: 600px;
+  background-size: 30%;
+  back
 }
