@@ -20,8 +20,10 @@ function formHandler(event) {
                 console.log(data.data);
                 console.log(data.data.amount);
                 let amount = data.data.amount;
-                userInputEl.text(coin)
-                coinDisplayEl.append(amount);
+                userInputEl.text(coin.toUpperCase())
+                coinDisplayEl.append('$' + amount);
+                $('input[name="coin-input"]').val('');
+               randomDrink();
             })
             .catch(err => {
                 console.error(err);
