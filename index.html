@@ -2,67 +2,76 @@
 <html>
 
 <head>
-    <title>Title</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+  <!-- header -->
+  <header>
     <div class="row">
-        <div class="col s12 center"><span class="flow-text">This is the header</span></div>
+      <div class="col s12 center"><span class="flow-text">This is the header</span></div>
     </div>
-    <main>
-        <div class="row">
-            <div class="col s1">
-                <span class="flow-text">
-                    <form id="coin-search" action="">
-                        <input type="text" name="coin-input">
-                        <input type="submit" class="btn btn-lg btn-primary">
-                    </form>
-                </span></div>
-            <div class="col s11">
-                <span id="coin-display" class="flow-text">
-                    <h2 id="user-input"></h2>
-                </span>
-        </div>
-        </div>
-    </main>
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l4">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  </header>
 
-        <div class="footer-copyright">
-            <div class="container">
-                © 2021 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
+  <main>
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col s2 ">
+        <span class="flow-text ">
+          <form id="coin-search" action="">
+            <input type="text" name="coin-input">
+            <input type="submit" class="btn btn-lg btn-primary">
+          </form>
+        </span>
+      </div>
+      <div class="col s10 main-image">
+        <span id="coin-display" class="flow-text">
+          <h2 id="user-input"></h2>
+        </span>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l4">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
         </div>
-        </div>
-    </footer>
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Materialize Framewrk -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Custom Scripts -->
-    <script src="./scripts/coinbase.js"></script>
-    <script src="./scripts/cocktail.js"></script>
-    <script src="./scripts/main.js"></script>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        © 2021 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Materialize Framewrk -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Custom Scripts -->
+  <script src="./assets/scripts/coinbase.js"></script>
+  <script src="./assets/scripts/cocktail.js"></script>
+  <script src="./assets/scripts/main.js"></script>
 </body>
 
 </html>
