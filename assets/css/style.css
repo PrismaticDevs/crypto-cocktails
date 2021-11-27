@@ -7,11 +7,13 @@ body {
 main {
   flex: 1 0 auto;
 }
-
+.main-section {
+  background-color: green;
+  min-height: 75%;
+}
 .main-image {
   background-image: url(../images/image5.png);
   background-repeat: no-repeat;
-  height: 600px;
-  background-size: 30%;
-  back
+  height: auto;
+  max-width: 100%;
 }
