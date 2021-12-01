@@ -15,7 +15,12 @@
   <!-- header -->
   <header>
     <div class="row">
-      <div class="col s12 center"><span class="flow-text">Crypto and Cocktails</span></div>
+      <div class="col s12 center green">
+        <h1>
+          Crypto and Cocktails
+        </h1>
+
+      </div>
     </div>
 
   </header>
@@ -23,27 +28,29 @@
   <main>
     <div class="row">
       <!-- sidebar -->
-      <div class="col s2 ">
-        <span class="flow-text ">
+      <div class="col s2 green sidebar">
+        <span class="flow-text center">
+          <h5>Search Coinbase</h5>
           <form id="coin-search" action="">
-            <input type="text" name="coin-input" placeholder="Cryptocurrency Ticker">
+            <input id="coin-input" type="text" class="white" name="coin-input" placeholder="  Cryptocurrency Ticker">
             <input type="submit" class="btn btn-lg btn-primary">
           </form>
         </span>
       </div>
       <div class="col s10 main-image">
+        <h2 id="coin-name"></h2>
         <span id="coin-display" class="flow-text">
-          <h2 id="user-input"></h2>
         </span>
         <h3 id="drinkName"></h3>
-        <div id="drinkImg">
+        <span id="drinkImg">
 
-        </div>
+        </span>
       </div>
+    </div>
     </div>
   </main>
 
-  <footer class="page-footer">
+  <footer class="green">
     <div class="container">
       <div class="row">
         <div class="col l4">

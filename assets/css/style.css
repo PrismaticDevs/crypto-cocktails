@@ -18,3 +18,13 @@ main {
   max-width: 100%;
   clip: rect(0, 400px, 200px, 0);
 }
+
+.sidebar {
+  height: 90vh;
+}
+
+#coin-input {
+  padding-left: 1em;
+  width: 90%;
+  border-radius: 5px;
+}
