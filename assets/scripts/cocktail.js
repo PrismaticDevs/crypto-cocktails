@@ -1,7 +1,10 @@
 function randomDrink() {
 
     cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-
+    let drinkNameEl = $('#drinkName');
+    let drinkImgEl = $('#drinkImg')
+    
+    
     fetch(cocktailUrl)
     .then(function (response) {
     // When this request is made, get the response and check to see if it went well
@@ -9,10 +12,9 @@ function randomDrink() {
     return response.json();
     })
     .then(function (data) {
+        drinkImgEl.empty();
         console.log(data.drinks[0].strDrink);
         console.log(data);
-        let drinkNameEl = $('#drinkName');
-        let drinkImgEl = $('#drinkImg')
         let drinkName = data.drinks[0].strDrink;
         let drinkImg = data.drinks[0].strDrinkThumb;
         drinkNameEl.text(drinkName);
