@@ -30,7 +30,12 @@ function formHandler(event) {
                randomDrink();
             })
             .catch(err => {
+                coinDisplayEl.empty
                 console.error(err);
+                coinDisplayEl.append()
+
+
+                    '<h3 class="red-text">Invalid Ticker</h3>'
             })
     }
 }
