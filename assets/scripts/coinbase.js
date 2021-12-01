@@ -9,8 +9,8 @@ let userInputEl = $('#coin-name');
 
 function formHandler(event) {
     event.preventDefault();
-    
-    coin =$('input[name="coin-input"]').val();
+
+    coin = $('input[name="coin-input"]').val();
     let requestedUrl = `https://api.coinbase.com/v2/prices/${coin}-usd/sell`
     console.log(coin);
     coinbase();
@@ -27,10 +27,23 @@ function formHandler(event) {
                 userInputEl.text(coin.toUpperCase())
                 coinDisplayEl.append("$" + Number(amount).toLocaleString());
                 $('input[name="coin-input"]').val('');
-               randomDrink();
+                randomDrink();
+
             })
             .catch(err => {
+                let drinkNameEl = $('#drinkName');
+                let drinkImgEl = $('#drinkImg');
+                drinkImgEl.empty();
+                drinkNameEl.empty();
+                coinDisplayEl.empty();
+                userInputEl.empty();
                 console.error(err);
+                if (!coin) {
+                    coinDisplayEl.append('<h3 class="red-text">Input Required</h3>')
+                } else {
+                    coinDisplayEl.append('<h3 class="red-text">Invalid Ticker</h3>')
+                }
+
             })
     }
 }
