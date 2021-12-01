@@ -24,8 +24,7 @@ function formHandler(event) {
                 console.log(data.data);
                 console.log(data.data.amount);
                 amount = data.data.amount;
-                userInputEl.text(coin.toUpperCase())
-                coinDisplayEl.append('$' + amount);
+                coinDisplayEl.append("$" + Number(amount).toLocaleString());
                 $('input[name="coin-input"]').val('');
                randomDrink();
             })
