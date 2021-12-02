@@ -6,6 +6,25 @@ let amount;
 let coinDisplayEl = $('#coin-display');
 let userInputEl = $('#coin-name');
 
+const el = $('#test');
+async function coins() {
+    await fetch('https://api.exchange.coinbase.com/currencies')
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            for (let i = 0; i < data.length; i++) {
+                el.append(data[i].name + ' ' + data[i].id + '<br>')
+                console.log(data[i]);
+            }
+        })
+        .catch(err => {
+            console.error(err);
+        })
+}
+
+coins();
+
 
 function formHandler(event) {
     event.preventDefault();
