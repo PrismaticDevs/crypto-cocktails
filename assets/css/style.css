@@ -14,11 +14,11 @@ main {
 }
 
 .main-image {
-    background-image: url(../images/crypto.jpg);
+    background-image: url(../images/cryptogetty.png);
     background-repeat: no-repeat;
     height: 90vh;
     max-width: 100%;
-    clip: rect(0, 400px, 200px, 0);
+    clip: rect(0, 200px, 200px, 0);
 }
 
 .sidebar {
