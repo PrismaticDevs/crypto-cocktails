@@ -13,16 +13,15 @@ async function coins() {
             return response.json();
         })
         .then(data => {
-            let allCoints = []
+            let allCoins = []
             for (let i = 0; i < data.length; i++) {
                 //el.append(data[i].name + ' ' + data[i].id + '<br>')
                 console.log(data[i]);
-                allCoints.push(data[i].id)
+                allCoins.push(data[i].id)
             }
-            console.log(allCoints);
             $(function() {
                 $( "#coin-input" ).autocomplete({
-                    source: allCoints
+                    source: allCoins
                 });
             })
         })
