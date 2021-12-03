@@ -25,6 +25,7 @@ main {
     height: 90vh;
 }
 
+
 /* #coin-input {
     padding-left: 1em;
     width: 90%;
@@ -32,7 +33,7 @@ main {
 } */
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -55,15 +56,19 @@ footer {
     border: 1px solid #454545;
     height: 0 0 30px;
 }
+
 #coin-input:hover {
     background: #656565
 }
+
 #coin-input:active {
     box-shadow: 0 0 30px #96f226
 }
+
 #coin-input:focus {
     box-shadow: 0 0 30px #96f226
 }
+
 .ui-autocomplete {
     position: absolute;
     top: 100%;
@@ -84,9 +89,9 @@ footer {
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     background-clip: padding-box;
-  }
-  
-  .ui-autocomplete > li > div {
+}
+
+.ui-autocomplete>li>div {
     display: block;
     padding: 3px 20px;
     clear: both;
@@ -94,18 +99,18 @@ footer {
     line-height: 1.42857143;
     color: #333333;
     white-space: nowrap;
-  }
-  
-  .ui-state-hover,
-  .ui-state-active,
-  .ui-state-focus {
+}
+
+.ui-state-hover,
+.ui-state-active,
+.ui-state-focus {
     text-decoration: none;
     color: #262626;
     background-color: #f5f5f5;
     cursor: pointer;
-  }
-  
-  .ui-helper-hidden-accessible {
+}
+
+.ui-helper-hidden-accessible {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -114,7 +119,8 @@ footer {
     padding: 0;
     position: absolute;
     width: 1px;
-  }
-  li{
-      line-height: 2;
-  }
+}
+
+li {
+    line-height: 2;
+}
