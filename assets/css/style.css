@@ -115,3 +115,6 @@ footer {
     position: absolute;
     width: 1px;
   }
+  li{
+      line-height: 2;
+  }
