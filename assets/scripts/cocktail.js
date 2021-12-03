@@ -16,8 +16,6 @@ function randomDrink() {
         })
         .then(function(data) {
             drinkImgEl.empty();
-            console.log(data.drinks[0].strDrink);
-            console.log(data);
             let drinkName = data.drinks[0].strDrink;
             let drinkImg = data.drinks[0].strDrinkThumb;
             let modalUl = $("<ul>");

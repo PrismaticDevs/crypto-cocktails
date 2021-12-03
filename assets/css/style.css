@@ -129,15 +129,17 @@ li {
     margin-bottom: 5%;
 }
 
+.myCoinBtn {
+    width: 60%;
+    margin: 4% 0 4% 0;
+}
 
 /* Media Queries */
 
 
-/* 
-@media screen and (max-width: 900px) {
-    .main-image {
-        display: none;
+ 
+/* @media screen and (max-width: 900px) {
+    .sidebar {
+        height: 20vh;
     }
-}
-
-@media screen and (min-width: 900) {} */
+} */
