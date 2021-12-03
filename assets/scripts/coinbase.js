@@ -13,10 +13,18 @@ async function coins() {
             return response.json();
         })
         .then(data => {
+            let allCoints = []
             for (let i = 0; i < data.length; i++) {
-                el.append(data[i].name + ' ' + data[i].id + '<br>')
+                //el.append(data[i].name + ' ' + data[i].id + '<br>')
                 console.log(data[i]);
+                allCoints.push(data[i].id)
             }
+            console.log(allCoints);
+            $(function() {
+                $( "#coin-input" ).autocomplete({
+                    source: allCoints
+                });
+            })
         })
         .catch(err => {
             console.error(err);
@@ -46,6 +54,7 @@ function formHandler(event) {
                 userInputEl.text(coin.toUpperCase())
                 coinDisplayEl.append("$" + Number(amount).toLocaleString());
                 $('input[name="coin-input"]').val('');
+                
                 randomDrink();
 
             })
