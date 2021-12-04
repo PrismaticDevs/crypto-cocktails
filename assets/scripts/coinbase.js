@@ -18,7 +18,7 @@ function loadCoins() {
         for (let i = 0; i < storedCoins.length; i++) {
             let coinBtn = $(
                 `<div>
-                <button id="${i}" data-coin="${storedCoins[i]}" class="myCoinBtn waves-effect waves-light btn-large">${storedCoins[i]}</button> <a class="remove-coin-btn">Remove</a>
+                <button id="${i}" data-coin="${storedCoins[i]}" class="myCoinBtn waves-effect waves-light btn-large">${storedCoins[i]}</button> <a id="${storedCoins[i]}" class="remove-coin-btn">Remove</a>
             </div>`
             );
             myCoinsEl.append(coinBtn);
@@ -76,7 +76,7 @@ function formHandler(event) {
 
     //localStorage.setItem("coins", JSON.stringify(myCoins));
     myCoins = [];
-    loadCoins()
+    loadCoins();
     coinbase();
     async function coinbase() {
         await fetch(requestedUrl)
@@ -126,8 +126,7 @@ function formHandler(event) {
                 //     return;
                 //}
                 loadCoins()
-                console.log(myCoins);
-
+                myCoins = '';
             })
             .catch(err => {
                 let drinkNameEl = $('#drinkName');
@@ -152,8 +151,16 @@ formEl.on('submit', formHandler)
 // click handler for history buttons
 myCoinsEl.on('click', function(event) {
     let btnClass = $(event.target).attr("class");
-    // console.log($(this).siblings().text());
-    if (btnClass === 'remove-coin-btn') {} else {
+    
+    if (btnClass === 'remove-coin-btn') {
+        let coinToRemove = $(event.target).attr("id");
+        myCoins = storedCoins = JSON.parse(localStorage.getItem("coins"));
+        console.log(myCoins);
+        myCoins = arrayRemove(myCoins, coinToRemove);
+        console.log(myCoins);
+        localStorage.setItem("coins", JSON.stringify(myCoins));
+        loadCoins();
+    } else {
         let coin = event.target.getAttribute('data-coin');
         event.stopPropagation();
         formEl.attr('data-coin', coin);
