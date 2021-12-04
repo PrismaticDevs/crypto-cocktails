@@ -17,19 +17,16 @@ function loadCoins() {
     if (storedCoins) {
         for (let i = 0; i < storedCoins.length; i++) {
             let coinBtn = $(
-                `<div>
-                <button id="${i}" data-coin="${storedCoins[i]}" class="myCoinBtn waves-effect waves-light btn-large">${storedCoins[i]}</button> <a id="${storedCoins[i]}" class="remove-coin-btn">Remove</a>
-            </div>`
+                `<div class="row">
+                    <div col s12>
+                        <button id="${i}" data-coin="${storedCoins[i]}" class="myCoinBtn waves-effect waves-light btn-large">${storedCoins[i]}</button> <a id="${storedCoins[i]}" class="remove-coin-btn">Remove</a>
+                    </div>
+                </div>`
             );
             myCoinsEl.append(coinBtn);
         }
     }
 }
-
-// let removeCoinBtn = $('.remove-coin-btn');
-// removeCoinBtn.click(function() {
-//     console.log('click', $(this).siblings().text());
-// });
 
 async function coins() {
     await fetch('https://api.exchange.coinbase.com/currencies')
@@ -55,7 +52,6 @@ async function coins() {
 }
 
 coins();
-
 
 function formHandler(event) {
     event.preventDefault();
