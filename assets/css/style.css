@@ -25,7 +25,6 @@ main {
     height: 100vh;
 }
 
-
 footer {
     position: relative;
     bottom: 0;
@@ -125,23 +124,11 @@ li {
 
 .myCoinBtn {
     width: 60%;
-    margin: 4% 0 4% 0;
+    margin: 4% 0 4% 6%;
 }
 
 .remove-coin-btn {
     cursor: pointer;
+    font-size: 1.5em;
+    margin-left: 5%;
 }
-
-.remove-coin-btn:hover {
-    color: red;
-}
-
-
-/* Media Queries */
-
-
-/* @media screen and (max-width: 900px) {
-    .sidebar {
-        height: 20vh;
-    }
-} */
