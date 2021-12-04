@@ -68,42 +68,44 @@ function formHandler(event) {
     let requestedUrl = `https://api.coinbase.com/v2/prices/${coin}-usd/sell`
 
     
-    localStorage.setItem("coins", JSON.stringify(myCoins));
+    //localStorage.setItem("coins", JSON.stringify(myCoins));
     myCoins = [];
-    //loadCoins()
+    loadCoins()
     coinbase();
     async function coinbase() {
         await fetch(requestedUrl)
             .then(response => {
-               return response.json();
-               
+                return response.json();
             })
             .then(data => {
-                if (!data.errors) {
+                //if (!data.errors) {
                     //console.error(err , "error");
-                    // Get saved searches from local storage
                     storedCoins = JSON.parse(localStorage.getItem("coins"));
+                    // Get saved searches from local storage
+                    
                     // Check if there are any coins in local storage
                     console.log(myCoins);
                     if (storedCoins !== null) {
                         myCoins = storedCoins
                         console.log(myCoins);
                         if (!myCoins.includes(coin)) {
-                            myCoins.push(coin);
-                            console.log(myCoins);
+                            if (!data.errors) {
+                                myCoins.push(coin);
+                            }
                             localStorage.setItem("coins", JSON.stringify(myCoins));
                         }
-                    } else {
-
-                        myCoins.push(coin);
-                        console.log(myCoins);
-                        localStorage.setItem("coins", JSON.stringify(myCoins));
-                    }
+                     } else {
+                         if (!data.errors) {
+                             myCoins.push(coin);
+                             localStorage.setItem("coins", JSON.stringify(myCoins));
+                         }
+                        //console.log(myCoins);
+                   }
                     // console.log(coin);
-                    console.log(myCoins);
+                    //console.log(myCoins);
                     
 
-                    loadCoins()
+                    
                     coinDisplayEl.text('');
                     amount = data.data.amount;
                     userInputEl.text(coin.toUpperCase())
@@ -114,11 +116,11 @@ function formHandler(event) {
                     
                     $('input[name="coin-input"]').val('');
                     
-                } else {
-                    return;
-                }
-                
-                   
+                // } else {
+                //     return;
+                //}
+                loadCoins()
+                console.log(myCoins);
                 
             })
             .catch(err => {
@@ -126,8 +128,10 @@ function formHandler(event) {
                 let drinkImgEl = $('#drinkImg');
                 drinkImgEl.empty();
                 drinkNameEl.empty();
+                userInputEl.empty();
                 coinDisplayEl.empty();
-                
+                $('input[name="coin-input"]').val('');
+                location.href = "#coin-name"
                 console.error(err , "error");
                 if (!coin) {
                     coinDisplayEl.append('<h3 class="red-text">Input Required</h3>')
