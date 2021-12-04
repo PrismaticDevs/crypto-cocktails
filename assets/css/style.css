@@ -22,15 +22,9 @@ main {
 }
 
 .sidebar {
-    min-height: 90vh;
+    height: 100vh;
 }
 
-
-/* #coin-input {
-    padding-left: 1em;
-    width: 90%;
-    border-radius: 5px;
-} */
 
 footer {
     position: relative;
