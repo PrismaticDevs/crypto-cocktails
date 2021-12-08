@@ -13,7 +13,7 @@ This repository contains the code for a deployed web app that fetches cocktail r
 Matthew Brignola matthewbrignola@ymail.com<br>
 Jenya Seletsky js646@me.com
 Stephen Moore jufo2000@comcast.net
-Andrew McInally iLovePenguins@gmail.com
+Andrew McInally ihaveandybodies@gmail.com
 ## Technologies
   HTML
   <br>CSS
