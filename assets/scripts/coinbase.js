@@ -15,6 +15,10 @@ function loadCoins() {
   myCoinsEl.text("");
   storedCoins = JSON.parse(localStorage.getItem("coins"));
   if (storedCoins) {
+    console.log(storedCoins);
+    if (storedCoins.length !== 0) {
+      myCoinsEl.append(`<h5 class="center white-text">History</h5>`)
+    }
     for (let i = 0; i < storedCoins.length; i++) {
       let coinBtn = $(
         `<div class="row">
