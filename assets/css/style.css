@@ -1,3 +1,5 @@
+
+
 body {
     display: flex;
     min-height: 100vh;
@@ -22,7 +24,8 @@ main {
 }
 
 .sidebar {
-    height: 100vh;
+    height: 90vh;
+    overflow:auto;
 }
 
 footer {
@@ -60,6 +63,18 @@ footer {
 
 #coin-input:focus {
     box-shadow: 0 0 30px #96f226
+}
+
+coin-input::-webkit-input-placeholder { /* Edge */
+  padding-left: 1em;
+}
+
+coin-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  padding-left: 1em;
+}
+
+coin-input::placeholder {
+  padding-left: 1em;
 }
 
 .ui-autocomplete {
@@ -136,4 +151,8 @@ li {
 .crypto-icon {
     width: 14%;
     margin-left: 4%;
+}
+
+.submitButton {
+  margin-bottom: 10%;
 }
