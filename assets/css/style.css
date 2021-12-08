@@ -1,5 +1,3 @@
-
-
 body {
     display: flex;
     min-height: 100vh;
@@ -29,10 +27,11 @@ main {
 }
 
 footer {
-    position: relative;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .link:hover {
@@ -65,16 +64,18 @@ footer {
     box-shadow: 0 0 30px #96f226
 }
 
-coin-input::-webkit-input-placeholder { /* Edge */
-  padding-left: 1em;
+coin-input::-webkit-input-placeholder {
+    /* Edge */
+    padding-left: 1em;
 }
 
-coin-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  padding-left: 1em;
+coin-input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    padding-left: 1em;
 }
 
 coin-input::placeholder {
-  padding-left: 1em;
+    padding-left: 1em;
 }
 
 .ui-autocomplete {
@@ -154,5 +155,5 @@ li {
 }
 
 .submitButton {
-  margin-bottom: 10%;
+    margin-bottom: 10%;
 }
