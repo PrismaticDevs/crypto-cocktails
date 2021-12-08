@@ -8,10 +8,6 @@ main {
     flex: 1 0 auto;
 }
 
-.main-section {
-    background-color: green;
-    min-height: 75%;
-}
 
 .main-image {
     background-image: url(../images/crypto.jpg);
