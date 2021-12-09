@@ -78,6 +78,10 @@ li {
 
 /* Classes */
 
+.header-img {
+    width: 60%;
+}
+
 .main-image {
     background-image: url(../images/crypto.jpg);
     background-repeat: no-repeat;
@@ -173,4 +177,10 @@ li {
 
 .submitButton {
     margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-img {
+        width: 100%;
+    }
 }
