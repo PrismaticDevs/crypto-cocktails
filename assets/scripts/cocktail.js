@@ -2,6 +2,7 @@ $(".modal").modal();
 
 function randomDrink() {
     cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+    // DOM Elements
     let drinkNameEl = $("#drinkName");
     let drinkImgEl = $("#drinkImg");
     let modalDrink = $("#modal-drink");
@@ -37,16 +38,14 @@ function randomDrink() {
                 }
                 modalUl.append(modalLi);
                 recipe.append(modalUl);
-                // recipe.append(`${strIngredient}: ${strMeasure}`);
             }
             recipe.append("<b>Instructions: </b>" + data.drinks[0].strInstructions);
 
             drinkNameEl.text(drinkName);
             drinkImgEl.append(
                 `<img src="${drinkImg}" height="200rem" /> 
-        <br>
-        <button data-target="modal1" class="btn modal-trigger">Get Recipe</button>
-                `
+                <br>
+                <button data-target="modal1" class="btn modal-trigger">Get Recipe</button>`
             );
         });
 }
